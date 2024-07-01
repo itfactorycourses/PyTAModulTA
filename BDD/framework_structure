@@ -11,3 +11,33 @@ browser (puteti sa ii spuneti cum vreti dar sa fie sugestiv pentru proiect)
 environment (ATENTIE!!!! numele trebuie sa fie exact asa) el va contine linii de cod care sa se execute inainte
             de toate testele si respectiv dupa toate testele (hooks)
 
+In programare exista un concept numit design pattern care reprezinta o modalitate de organizare
+    a codului, astfel incat sa rezolve o anumita problema.
+
+    Carte Design Patterns: https://www.amazon.com/Design-Patterns-Object-Oriented-Addison-Wesley-Professional-ebook/dp/B000SEIBB8
+
+Unul dintre aceste design patterns se numeste POM (Page Object Model)
+
+Acest design pattern in automatizare presupune organizarea codului in asa fel incat
+        fiecare pagina web sa aiba drept corespondent in python un alt fisier de tip pages
+Logica din spatele acestui design pattern este urmatoarea:
+    de fiecare data cand se schimba locatia (cand se schimba extensia hostului) trebuie sa cream o alta pagina in python
+
+Exemplu:
+https://magento.softwaretestingboard.com -> asta este folderul de baza de pe server unde este aplicatia web
+
+https://magento.softwaretestingboard.com/customer -> in interiorul folderului de baza al aplicatiei
+                avem un alt folder numit customer. Deci, cand url-ul se schimba cu extensia /customer inseamna ca se citeste din folderul numit customer
+
+https://magento.softwaretestingboard.com/customer/account/login -> in interiorul folderului de baza al aplicatiei
+                avem un alt folder numit customer in care se afla un folder numit account, in care folder account se afla un alt folder numit login.
+                Deci, cand url-ul se schimba cu extensia /customer inseamna ca se citeste din folderul numit customer
+
+
+behave -f html -o behave-report.html:
+behave = comanda de rulare a tuturor testelor
+-f = optiunea care indica sistemului ca se va face raport formatat
+html = indica sistemului ca se doreste formatarea de tip html (html este prescurtarea de la behave_html_formatter:HTMLFormatter)
+-o = optiunea care indica sistemului ca raportul se va scrie intr-un output file
+behave-report.html = numele raportului (poate sa se numeasca oricum, dar sa fie relevant si sa aiba extensia .html)
+

@@ -30,7 +30,7 @@ Feature: Feature will validate the login module of the magento application
   Scenario: Verify that the user can log into the application with valid username and password
     Given I am on the magento software testing homepage
     When I click on the sign in link
-    When I insert a valid username and a valid password
+    When I insert username "rogoduhu.abujefe@gotgel.org" and password "test1234#"
     When I click the login button
     Then I am logged into the application
 
@@ -38,13 +38,13 @@ Feature: Feature will validate the login module of the magento application
   Scenario Outline: Verify that the user cannot log into the application if no proper credentials are provided
     Given I am on the magento software testing homepage
     When I click on the sign in link
-    When I insert username <username> and password <password>
+    When I insert username "<username>" and password "<password>"
     When I click the login button
-    Then I receive error message: <error_message>
+    Then I receive error message: "<error_message>"
     Examples:
       | username                  | password     | error_message                                                                                             |
-      |test@gmail.com             | fenrvrnbg    |The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.|
-      |rogoduhu.abujefe@gotgel.org| vbhrbvrjbvrt |The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.|
+      |test@gmail.com             | fenrvrnbg    | The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.|
+      |rogoduhu.abujefe@gotgel.org| vbhrbvrjbvrt | The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.|
       |   N/A                     | N/A          | This is a required field.                                                                                 |
       |   test                    | N/A          | Please enter a valid email address (Ex: johndoe@domain.com).                                              |
 
