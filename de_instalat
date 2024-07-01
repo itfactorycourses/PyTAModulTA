@@ -1,0 +1,3 @@
+pip install seleniumbase
+pip install selenium
+pip install html-testRunner

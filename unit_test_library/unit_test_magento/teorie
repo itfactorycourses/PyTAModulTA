@@ -1,0 +1,25 @@
+In general, atunci cand cream un framework de testare automata
+    ne intereseaza sa aiba o structura.
+De cele mai multe ori, aceasta structura este definita pe baza modulelor din aplicatie
+        Asta inseamna (de exemplu la unit test) ca fiecare modul va avea un fisier de python separat
+
+Atunci cand lucram cu libraria unit test, vom crea o clasa de test
+        care sa mosteneasca clasa unittest.TestCase
+
+Orice clasa de test trebuie sa aiba doua metode: setUp si tearDown
+
+setUp va contine toate actiunile (liniile de cod) care trebuie sa fie executate
+        inainte de fiecare test (linii de cod comune).
+        Scopul este acela de a evita redundanta liniilor de cod
+
+tearDown va contine toate actiunile (liniile de cod) care trebuie sa fie executate
+        dupa fiecare test (driver.quit())
+
+fiecare test va fi reprezentat de o metoda creata in interiorul clasei de test
+        numele metodelor de test trebuie sa inceapa cu test_
+        Fiecare metoda de test trebuie sa se termine cu un assert
+
+
+CTRL + F = cautare
+CTRL + R = inlocuire globala
+

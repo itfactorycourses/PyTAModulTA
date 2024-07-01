@@ -1,0 +1,13 @@
+folderul features -> va contine toate fisierele descriptive scrise in limbajul gherkin
+folderul steps -> va fi cel care va face legatura intre codul de automatizare si fisierele descriptive
+                    ele practic nu vor contine logica de cod ci doar apelare de metode
+folderul pages -> va fi cel care va contine efectiv logica de cod:
+                - clase de test
+                - selectori
+                - metode de interactiune cu elementele web
+
+fisierul behave.ini care contine o prescurtare pentru formatul de generare a fisierelor html de tip raport de executie
+browser (puteti sa ii spuneti cum vreti dar sa fie sugestiv pentru proiect)
+environment (ATENTIE!!!! numele trebuie sa fie exact asa) el va contine linii de cod care sa se execute inainte
+            de toate testele si respectiv dupa toate testele (hooks)
+

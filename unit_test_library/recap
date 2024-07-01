@@ -1,0 +1,10 @@
+Libraria unit test este folosita pentru a defini diverse teste automate intr-un mod structurat
+Deci, este un framework de testare automata
+
+Este implementat prin intermediul mostenirii clasei TestCase din libraria unittest
+
+Orice clasa de test trebuie sa aiba un setUp si un tearDown
+
+La final, dupa ce testele au fost scrise ele se pot aranja intr-o suita de executie
+        pentru a le putea executa in mod grupat.
+

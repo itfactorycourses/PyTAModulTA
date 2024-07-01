@@ -1,0 +1,44 @@
+1. Am invatat urmatorii selectori:
+a) id -> identificator unic pentru un element.
+                    Uneori poate sa fie duplicat, dar in general e cel mai reliable selector.
+                    (By.ID,"valoare_id")
+b) classname -> identificator pe baza clasei unui element. Un element poate fi reprezentat
+                    de mai multe clase separate prin spatiu.
+                    Atunci cand facem cautare dupa clase in selenium, trebuie sa folosim DOAR UNA
+                    din clasele elementului. Daca le folosim pe toate in cautare ne va returna
+                    eroare de element not found (By.CLASS_NAME,"valoare clasa")
+c) name -> identificator pe baza atributului nume al unui element (By.NAME, "valoare_name")
+d) tag -> identificator pe baza tag-ului unui element (deloc reliable)
+e) link text -> identificator pe baza textului complet pus peste un link
+f) partial link text -> identificator pe baza textului partial pus peste un link
+
+
+2. Selectorii se aplica peste elementele web. Printre mai utilizate elemente web sunt urmatoarele:
+- div -> este o modalitate prin care putem sa grupam mai multe elemente in functie de anumiti parametri
+- input -> este un element web care desemneaza posibilitatea de a introduce valori de la tastatura (email, parola)
+- label -> o eticheta care se poate pune peste un element web
+- button -> un element care poate sa declanseze o actiune
+- span -> este o modalitate prin care putem sa definim text intr-o aplicatie web
+- p -> este o modalitate prin care putem sa definim un paragraf de text
+- img -> modalitate prin care putem defini imagini
+- a -> vine de la ancora, si este o modalitate prin care putem sa definim linkuri catre alte pagini web
+        Aceste ancore sunt compuse din urmatoarele elemente:
+        - tag-ul de inceput (<a>)
+        - proprietati (href -> reprezinta linkul efectiv catre care vom fi redirectionati)
+        - link text (textul pe care il vedem noi in aplicatia web)
+- table -> inceputul unui tabel in html
+- th -> vine de la table header si reprezinta definirea headerului unui tabel (numele unei coloane)
+- tr -> vine de la table row si reprezinta un rand intr-o tabela
+- td -> vine de la table data si reprezinta o singura celula dintr-un tabel
+- form -> anunta inceperea unui formular
+- h1 (h2, h3, h4, h5, h6) -> anunta un titlu de diferite dimensiuni
+- lable -> eticheta pusa peste un element web (ex: email deasupra casutei de input pentru email)
+- br -> vine de la  break. muta continuarea scrisului pe randul urmator
+- i -> vine de la italic, marcheaza textul sub format oblic
+- b -> vine de la bold. marcheaza textul ingrosat
+- del -> vine de la delete. marcheaza textul sub format strikethrough
+
+Atunci cand se creaza o pagina web (in cea mai simpla forma) se folosesc doua limbaje:
+- html -> folosit pentru definirea structurii paginii web
+- css -> care este folosit pentru definirea aspectului paginii web
+

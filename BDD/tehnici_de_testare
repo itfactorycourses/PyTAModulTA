@@ -1,0 +1,52 @@
+1.Blackbox
+a) Equivalence Partitioning = o tehnica de testare care poate fi folosita atunci cand avem o plaja foarte mare
+    de valori care este nerealist si nerecomandat sa fie testata in intregime
+    Atunci o sa impartim valorile de input in grupe numite clase de echivalenta care vor contine
+            inputuri ce vor returna acelasi output.
+    Atunci testam vom evalua o singura valoare din fiecare clasa de echivalenta,
+            iar rezultatul aceleia va reprezenta rezultatul tuturor valorilor din acea clasa de echivalenta
+
+    Vom testa atat clasele de echivalente valide (positive testing) cat si clasele de echivalenta invalide (negative testing)
+
+    Exemplu:
+     O companie vrea sa dezvolte un sistem de vanzare bilete de avion cu urmatoarele reguli:
+     - copiii pana la 18 ani au gratuitate
+     - adultii platesc bilet intreg
+     - varstnicii peste 65 de ani vor avea 50 reducere
+
+  Clase de echivalenta:
+  varsta <0
+  varsta 0-18 -> gratuite
+  adulte 19-65 -> full
+  > 65 -> 50%
+  varsta numere zecimale (separator virgula si separator punct)
+  varsta cu caractere alfanumerice
+  varsta cu caractere de tip unicode
+
+  La testare voi alege cate o valoare din fiecare. Exemple: 14, 36, 87
+                                                            12, 45, 74
+                                                            5,  25, 91
+
+b) Boundary Value Analysis este o tehnica de testare adiacenta EP (Adica se vor testa impreuna)
+            La BVA vom testa intotdeauna limitele claselor de echivalenta.
+            In cazul nostru putem sa testam valorile 0, 18, 65
+
+input varsta
+if varsta>0 and varsta<=18:
+    discount = 1
+elif varsta >18 and varsta <=65:
+    discount = 0
+else:
+    discount = 0.5
+
+c) State Transition Testing
+d) Decision Table
+
+
+2. Whitebox
+3. Experience-Based
+
+
+Positive testing = tip de testare care evalueaza faptul ca sistemul se comporta corect atunci cand primeste date valide
+Negative testing = tip de testare care evalueaza faptul ca sistemul trateaza in mod corect si inteligibil inputurile neasteptate
+

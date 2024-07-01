@@ -1,0 +1,55 @@
+Testarea Software este un proces prin intermediul caruia ne asiguram ca produsul pe care il
+    livram este de calitate, si ca acesta respecta cerintele si nevoile clientului
+
+Testarea in general este cunoscuta sub acronimul STLC (Software Testing Lifecycle)
+
+Procesul de testare face parte dintr-un proces mai extins cunoscut sub acronimul SDLC (Software Developement Lifecycle)
+
+SDLC are urmatoarele etape:
+Concept
+Analiza si definire cerinte de business
+Implementare (dezvoltare)
+Testare -> AICI SUNTEM NOI
+Lansare (trimitere catre client)
+
+
+Testarea se poate face in doua feluri:
+- Testare manuala, care implica folosirea fara tool-uri automate a tipurilor si tehnicilor de testare pentru validarea produsului software
+- Testare automata -> foloseste aceleasi tipuri si tehnici de testare ca si testarea manuala,
+            cu diferenta ca in scopul automatizarii se scrie cod care sa valideze in locul nostru functionalitatea aplicatiei
+
+
+
+Avantajul testarii automate este acela ca putem scrie cod o singura data si sa rulam o serie de teste zilnic
+De exemplu, cand facem modificari in aplicatie, fie pentru fixare de bug-uri fie pentru functionalitati noi,
+        exista sanse ca functionalitatile existente sa fie impactate si sa nu mai functioneze corect
+        Noi trebuie sa facem validare sa ne asiguram ca acest lucru nu se intampla.
+        Si in loc sa facem acest lucru manual, putem scrie o suita de teste automate care sa faca
+        validarea in locul nostru in timp ce noi fie validam functionalitatea noua fie validam faptul ca bug-urile au fost rezolvate
+Atunci cand verificam daca modificarile aduse aplicatiei au impactat functionalitatile existente validate ca fiind corecte
+spunem ca facem testare de regresie (Adica testarea prin intermediul careia verificam ca aplicatia web nu a suferit o regresie)
+
+In general este recomandat sa automatizam functionalitati stabile, care nu se schimba foarte des.
+In caz contrar, putem ajunge in situatia in care sa petrecem mai mult timp scriind cod de automatizare
+        decat facand testare manuala
+
+Atunci cand scriem un test automat, primul lucru pe care il facem este sa reproducem acel test manual
+        si apoi sa mulam testul automat in functie de asteptarile conform rularii testului manual.
+
+
+De recomandat pentru viitor:
+Tipuri de testare (testare pozitiva, testare negativa, testare functionala, testare non-functionala
+                    retesting, regression testing, smoke testing, sanity testing)
+Tehnici de testare:
+a) Blackbox testing (testare fara acces la cod) - equivalence partitioning, boundary value analysis, state transtition testing, decision table
+b) Whitebox testing (testare cu acces la cod) - statement coverage, decision coverage
+c) Experience Based Testing (ad-hoc testing, checklist-based testing, exploratory testing, error guessing)
+
+Etapele procesului de testare: planificare, analiza, design, implementare, inchidere, monitorizare si control
+
+Nivelurile de testare: unit testing, integration testing, system testing, acceptance testing
+
+sursa recomandata pentru invatat:
+- https://tryqa.com/
+- https://www.guru99.com/software-testing.html
+

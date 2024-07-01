@@ -1,0 +1,10 @@
+pip install behave
+pip install behave-html-formatter
+
+install gherkin plugin
+        (1. Intrati in meniul de tip hamburger din stanga sus (sau click pe file daca nu va apare meniul
+         2. Click pe settings
+         3. Click pe plugins
+         4. Scrieti in inputul de cautare gherkin
+         5. Instalati pluginul)
+

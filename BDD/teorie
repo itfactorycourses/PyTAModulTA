@@ -1,0 +1,65 @@
+TDD este o abordate de software development in care testele sunt scrise
+        inaintea codului propriu zis
+
+Secventa activitatilor in TDD (Test Driven Development):
+
+1. Se scriu testele automata (de regula teste unitare)
+2. Se ruleaza testele scrise. Testele vor avea statusul failed (pentru ca nu avem codul scris)
+3. Se creaza codul care sta in spatele aplicatiei
+4. Se refactorizeaza (ATENTIE!!!! nu refactureaza) codul, adica se actualizeaza in functie de codul care a fost scris
+5. Se reruleaza testele si se analizeaza rezultatele:
+- daca testele au fost passed sunt marcate ca atare
+- daca testele au fost failed ele sunt analizate, se indentifica bug-urile aferente,
+        dupa care aceste bug-uri sunt fixate si retestate**
+6. Procesul se reia pana cand toate testele au statusul passed
+
+Avantaje:
+1. Se acorda o atentie mai mare testarii (prin faptul ca se scrie codul pentru teste, nu testele sunt scrise pentru cod)
+2. Se identifica defectele mult mai devreme in procesul de dezvoltare, lucru care duce la bug-uri mai ieftin de fixat si potential mai mici
+
+
+Note:
+1. Testarea unitara face parte dintr-o suita de niveluri de testare care au rolul de a evalua
+            calitatea produsului la diverse stadii de finalizare
+- unit testing -> nivel de testare care evalueaza cele mai mici bucati functionale din cod (ex: clase, obiecte, functii etc)
+- integration testing -> evalueaza felul in care componentele individuale sunt conectate si comunica intre ele
+                (ex: felul in care o clasa mostenitoare citeste date dintr-o clasa parinte,
+                     felul in care modulul de search product comunica cu modulul de checkout,
+                     testarea de API)
+- system testing -> nivel de testare care se face atunci cand toate componentele sunt complet integrate pentru a ne asigura ca functionalitatile end to end (e2e) sunt corecte
+- acceptance testing -> nivel de testare care se face ca si ultima validare inainte de lansare pentru a ne asigura ca produsul indeplineste nevoile utilizatorului
+                -> alpha testing (se face la sediul dezvoltatorului de regula de catre testeri)
+                -> beta testing (se face la sediul clientului sau in mediul clientului de catre client in sine sau de catre utilizatorul final)
+
+2.**
+Dupa fixarea unui bug se face un tip de testare care se numeste retesting (retestare)
+    Scopul acestui tip de testare este acela de a ne asigura ca bug-ul a fost fixat
+
+Dupa fixarea unui bug sau dupa orice alta modificare adusa codului se face un tip de testare care se numeste
+        regression testing.
+            si de catre persoanele mai putin tehnice.
+
+Secventa activitatilor in TDD (Test Driven Development):
+
+1. Se definesc fisierele descriptive (feature files)
+2. Se scriu testele automate plecand de la fisierele descriptive anterioare
+3. Se ruleaza testele scrise. Testele vor avea statusul failed (pentru ca nu avem codul scris)
+4. Se creaza codul care sta in spatele aplicatiei
+5. Se refactorizeaza (ATENTIE!!!! nu refactureaza) codul, adica se actualizeaza in functie de codul care a fost scris
+6. Se reruleaza testele si se analizeaza rezultatele:
+- daca testele au fost passed sunt marcate ca atare
+- daca testele au fost failed ele sunt analizate, se indentifica bug-urile aferente,
+        dupa care aceste bug-uri sunt fixate si retestate**
+7. Procesul se reia pana cand toate testele au statusul passed
+
+
+Avantajele acestei abordari:
+1. Se acorda o atentie mai mare scenariilor de testare (prin faptul ca se scrie codul pentru scenarii, nu scenariile sunt scrise pentru cod)
+2. Se identifica defectele mult mai devreme in procesul de dezvoltare, lucru care duce la bug-uri mai ieftin de fixat si potential mai mici
+3. Asigura o colaborare mult mai fructuoasa intre persoanele implicate si ofera o claritate mai mare persoanelor non-tehnice (business)
+        Scopul acesteia este acela de a valida ca functionalitatile care au fost deja marcate ca fiind corecte
+        si-au pastrat in continuare comportamentul asteptat (practic ne asiguram ca sistemul nu a suferit o regresie)
+
+
+BDD (Behaviour Driven Development) = o abordare de software development derivata din TDD
+            care are drept scop principal asigurarea unei intelegeri mai mari asupra codului de testare automata
