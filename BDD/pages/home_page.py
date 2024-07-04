@@ -1,8 +1,9 @@
 from selenium.webdriver.common.by import By
 
+from base_page import Base_Page
 from browser import Browser
 
-class Home_Page(Browser):
+class Home_Page(Base_Page):
 
     SIGN_IN_LINK = (By.LINK_TEXT,'Sign In')
 

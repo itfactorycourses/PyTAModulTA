@@ -1,8 +1,7 @@
 from selenium.webdriver.common.by import By
+from base_page import Base_Page
 
-from browser import Browser
-
-class Account_Page(Browser):
+class Account_Page(Base_Page):
 
     MY_ACCOUNT_ARROW = (By.XPATH,'//header[@class="page-header"]//button[@class="action switch"]')
     MY_ACCOUNT_LINK = (By.LINK_TEXT,'My Account')

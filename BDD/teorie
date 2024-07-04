@@ -1,3 +1,7 @@
+
+BDD (Behaviour Driven Development) = o abordare de software development derivata din TDD
+            care are drept scop principal asigurarea unei intelegeri mai mari asupra codului de testare automata
+
 TDD este o abordate de software development in care testele sunt scrise
         inaintea codului propriu zis
 
@@ -39,7 +43,7 @@ Dupa fixarea unui bug sau dupa orice alta modificare adusa codului se face un ti
         regression testing.
             si de catre persoanele mai putin tehnice.
 
-Secventa activitatilor in TDD (Test Driven Development):
+Secventa activitatilor in BDD (Behaviour Driven Development):
 
 1. Se definesc fisierele descriptive (feature files)
 2. Se scriu testele automate plecand de la fisierele descriptive anterioare
@@ -60,6 +64,3 @@ Avantajele acestei abordari:
         Scopul acesteia este acela de a valida ca functionalitatile care au fost deja marcate ca fiind corecte
         si-au pastrat in continuare comportamentul asteptat (practic ne asiguram ca sistemul nu a suferit o regresie)
 
-
-BDD (Behaviour Driven Development) = o abordare de software development derivata din TDD
-            care are drept scop principal asigurarea unei intelegeri mai mari asupra codului de testare automata

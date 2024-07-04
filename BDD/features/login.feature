@@ -27,6 +27,7 @@ Feature: Feature will validate the login module of the magento application
 #  Then the order is created
 #  And I can see the order in order history (THEN I can see the order in order history)
 
+  @regression
   Scenario: Verify that the user can log into the application with valid username and password
     Given I am on the magento software testing homepage
     When I click on the sign in link
@@ -35,6 +36,7 @@ Feature: Feature will validate the login module of the magento application
     Then I am logged into the application
 
 #  scenario outline se foloseste atunci cand vrem sa executam acelasi set de pasi de executie, dar cu inputuri diferite
+  @login_invalid @regression
   Scenario Outline: Verify that the user cannot log into the application if no proper credentials are provided
     Given I am on the magento software testing homepage
     When I click on the sign in link
@@ -46,7 +48,7 @@ Feature: Feature will validate the login module of the magento application
       |test@gmail.com             | fenrvrnbg    | The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.|
       |rogoduhu.abujefe@gotgel.org| vbhrbvrjbvrt | The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.|
       |   N/A                     | N/A          | This is a required field.                                                                                 |
-      |   test                    | N/A          | Please enter a valid email address (Ex: johndoe@domain.com).                                              |
+      |   test                    | N/A          | Please enter a valid email address (Ex: johndoe@domain.com).                                           |
 
 
 

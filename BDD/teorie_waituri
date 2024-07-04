@@ -1,0 +1,28 @@
+Sleep
+
+Daca avem sleep inainte de element, atunci sistemul va astepta x secunde (specificate ca argument la metoda sleep)
+        inainte sa caute elementul
+Daca avem sleep dupa element, si elementul este gasit, sistemul va returna elementul dupa care va astepta
+            numarul de secunde definit ca argument la metoda sleep
+Daca avem sleep dupa element si elementul nu este gasit, atunci sistemul va returna eroare si nu va mai apuca
+            sa astepte numarul de secunde desemnat de metoda sleep
+
+
+Implicit Wait:
+Atunci cand cautam un element, daca nu este gasit, sistemul incearca sa il caute din nou
+        timp de x secunde, specificate intre argumentele unui implicit wait.
+        Implicit wait este global, adica afecteaza toate elementele din proiect.
+        Atunci cand elementul este gasit, se va trece instant la instructiunea urmatoare,
+                chiar daca nu s-a asteptat numarul de secunde specificat in implicit wait
+        Atunci cand elementul nu este gasit, se va returna timeout
+        In general nu se recomanda implicit wait decat in situatii speciale pentru ca poate sa incetineasca codul
+
+
+Explicit wait:
+Daca avem explicit wait pe elementul cautat si acesta va fi gasit, atunci se va actiona asupra lui instant
+Daca avem explicit wait pe elementul cautat si acesra nu va fi gasit, atunci se va astepta numarul de secunde indicat,
+        timp in care se va incerca sa se caute elementul, dupa care va returna timeout
+Daca avem explicit wait pe un alt element decat elementul cautat si acesta va f gasit, se va actiona asupra lui instant
+Daca avem explicit wait pe un alt element decat pe elementul cautat si acesta nu va fi gasit , atunci sistemul va returna instant
+        eroarea NoSuchElement exception
+
