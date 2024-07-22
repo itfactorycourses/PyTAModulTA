@@ -1,0 +1,38 @@
+1. Ce este API? Este o suita de metode, reguli si proceduri care ajuta
+la transmiterea de informatii informatii intre sisteme
+
+2. Cum se transmite informatia? Prin intermediul requesturilor HTTP(s)
+
+3. Componentele unui request?
+- endpoint
+- http method
+- request body (daca e necesar)
+- token (daca e necesar)
+- parametri de filtrare (daca e necesar - vor duce la adaugarea unor elemente noi in endpoint)
+
+4. Componentele unui response
+- response body
+- execution time
+- response size
+- status code
+- cookies, tests status etc (recomandare studiu individual dupa curs: https://learning.postman.com/docs/tests-and-scripts/write-scripts/test-scripts/)
+
+5. Status Codes:
+- 2xx -> coduri de succes
+- 3xx -> coduri de redirectionare
+- 4xx -> coduri de eroare client
+- 5xx -> coduri de eroare server
+
+6. HTTP methods:
+- GET -> cere extragerea unei resurse EXISTENTE dintr-o baza de date
+- POST -> cere scrierea unei resurse NOI intr-o baza de date
+- PUT -> cere actualizarea totala a unei resurse existente intr-o baza de date. Daca resursa nu exista, ea va fi creata
+- PATCH -> cere actualizarea partiala a unei resurse existente intr-o baza de date
+- DELETE -> cere stergerea unei resurse existente intr-o baza de date
+
+Detalii discutate la sesiunea anterioara: https://docs.google.com/document/d/16V_SqD3w9KdgOgSmfNFN1rXr-_2f70eXQhP9MQmIxl8/edit#heading=h.624d4ap3cmkt
+
+
+Documentatie Simple books: https://docs.google.com/document/d/16V_SqD3w9KdgOgSmfNFN1rXr-_2f70eXQhP9MQmIxl8/edit#heading=h.624d4ap3cmkt
+
+

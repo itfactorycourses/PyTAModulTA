@@ -1,0 +1,22 @@
+La framework-ul de API in Pycharm lucrurile stau destul de simplu. O sa avem:
+1. Un folder numit requests_folder. Folderul NU TREBUIE SA SE NUMEASCA REQUESTS. Pentru ca altfel se va face confuzie cu libraria requests si vi se vor returna erori la importuri
+2. Un folder numit tests -> Folderul asta trebuie sa fie pachet. Adica trebuie sa contina un fisier python gol numit __init__
+
+Toate requesturile or sa fie facute in folderul requests_folder sub forma de metode care vor apela niste endpointuri
+        pe baza metodelor http stocate in libraria requests
+Fiecare request va returna corpul de raspuns al requestului pe care il facem
+
+Metodele de request care sunt create in folderul requests_folder or sa fie apelate in metodele de test din folderul tests
+Metodele de test vor fi grupate in clase care sa inceapa cu Test
+Metodele de test vor fi denumite astfel incat sa inceapa cu test_
+Numele fisierelor care vor contine clasele de test trebuie sa inceapa cu test_
+
+Rularea testelor se va face din terminal folosind comanda pytest care va rula toate testele
+Uneori e nevoie specificarea explicita a folderului in care se afla testele. Adica vom rula comanda "pytest tests"
+Daca vrem sa rulam un singur fisier de test trebuie sa ii specificam adresa la care se gaseste.
+    De exemplu, daca avem fisierul numit test_get_books vom rula asa: "pytest tests/test_get_books.py"
+
+Daca vrem sa rulam testele cu generarea unui raport de executie putem rula comanda: "pytest tests/nume_fisier_test.py --html='nume-raport.html'"
+        Exemplu: daca vrem sa rulam fisierul test_get_books.py vom rula pytest tests/test_get_books.py --html="test-report.html"
+                 daca vrem sa rulam toate testele vom rula pytest tests --html="test-report.html"
+

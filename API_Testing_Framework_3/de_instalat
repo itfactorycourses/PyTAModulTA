@@ -1,0 +1,5 @@
+pip install pytest
+pip install pytest-html
+pip install requests
+
+(puteti verifica lista de pachete instalate cu comanda pip list)
