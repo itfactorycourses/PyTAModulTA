@@ -21,12 +21,20 @@ class Test_GET_All_Books:
     # de completat data viitoare:
     def test_get_all_books_filter_by_valid_limit(self):
         response_data = get_all_books(limit=3)
+        assert len(response_data.json()) == 3, "Error, the number of returned books is not correct"
 
     def test_get_all_books_filter_by_type_and_valid_limit(self):
-        pass
+        response_data = get_all_books('non-fiction',3)
+        is_filtering_by_type_correct = True
+        for item in response_data.json():
+            if item["type"] != "non-fiction":
+                is_filtering_by_type_correct = False
+                break
+        assert is_filtering_by_type_correct == True, "Error, at least one book has the wrong type"
+        assert len(response_data.json())<=3, "Error, request returned more than the designated limit of books"
 
 
-    # in fisiere separate:
-    # - generate token (se poate face fisier separat sau se poate lucra in fisierul get_api_status - redenumit in api_admin)
-    # - submit order (POST)
     # - delete order
+
+# ["mere","pere","nuci","covrigi"]
+#    0       1      2       3

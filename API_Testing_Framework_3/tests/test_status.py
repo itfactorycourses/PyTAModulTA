@@ -1,4 +1,4 @@
-from requests_folder.get_api_status import get_api_status
+from requests_folder.admin_requests import get_api_status
 
 class Test_Status:
 
@@ -8,7 +8,7 @@ class Test_Status:
         response_data = get_api_status()
         assert response_data.json()["status"] == 'OK',f"Error: Expected status: OK, actual status: {response_data.json()['status']}"
         assert response_data.status_code == 200,f"Error: Expected status code: 200, actual status code: {response_data.status_code}"
-        assert response_data.elapsed.microseconds < 4000, f"Error: Expected execution time: <4000ms, actual execution time: {response_data.elapsed}"
+        assert response_data.elapsed.microseconds < 4000000, f"Error: Expected execution time: <4000ms, actual execution time: {response_data.elapsed}"
 
 # Daca assertul returneaza eroare pot fi doua situatii:
 # a) assertul returneaza eroare din cauza codului de testare automata -> atunci trebuie sa corectam codul de testare automata pana cand testul devine passed
